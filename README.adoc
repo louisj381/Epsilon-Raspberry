@@ -1,9 +1,9 @@
-# Epsilon-Raspberry
+= Epsilon-Raspberry
 
 This repo contains config files for the primary and secondary pi.
 
 
-## File Information
+== File Information
 
 The `xorg.conf` tells the Xserver how to layout the video output from the pi onto the screen. 
 This file is only needed on the primary pi.
