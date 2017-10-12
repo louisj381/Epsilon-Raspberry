@@ -1,8 +1,7 @@
 # Epsilon-Raspberry
 
-----
 This repo contains config files for the primary and secondary pi.
-----
+
 
 ## File Information
 
