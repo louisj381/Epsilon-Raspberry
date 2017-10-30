@@ -1,10 +1,10 @@
 #!/bin/bash
 
 sudo: required
-###base script to fresh install systems onto base image for raspberry pi
+#base script to fresh install systems onto base image for raspberry pi
 
 #configure displays
-cd ~
+cd /opt/
 git clone https://github.com/UCSolarCarTeam/Epsilon-Raspberry.git
 cd Epsilon-Raspberry/primary/
 cp xorg.conf /etc/X11/
@@ -29,8 +29,8 @@ fi
 
 #begin QT install
 apt-get update
-yes | apt-get upgrade
-yes | apt-get install libfontconfig1-dev libdbus-1-dev libfreetype6-dev libudev-dev libicu-dev libsqlite3-dev
+-y apt-get upgrade
+-y apt-get install libfontconfig1-dev libdbus-1-dev libfreetype6-dev libudev-dev libicu-dev libsqlite3-dev
 libxslt1-dev libssl-dev libasound2-dev libavcodec-dev libavformat-dev libswscale-dev libgstreamer0.10-dev
 libgstreamer-plugins-base0.10-dev gstreamer-tools gstreamer0.10-plugins-good gstreamer0.10-plugins-bad
 libraspberrypi-dev libpulse-dev libx11-dev libglib2.0-dev libcups2-dev freetds-dev libsqlite0-dev libpq-dev
