@@ -1,0 +1,24 @@
+1030,1031c1030,1031
+< QT_CFLAGS_DBUS=
+< QT_LIBS_DBUS=
+—
+> QT_CFLAGS_DBUS="-I/usr/include/dbus-1.0/ -I/usr/lib/arm-linux-gnueabihf/dbus-1.0/include/"
+> QT_LIBS_DBUS=-ldbus-1
+1034,1035c1034,1038
+< QT_CFLAGS_GLIB=
+< QT_LIBS_GLIB=
+—
+> QT_CFLAGS_GLIB="-I/usr/include/glib-2.0/ -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include/"
+> QT_LIBS_GLIB=-lglib-2.0
+>
+> QT_CFLAGS_PULSEAUDIO="-I/usr/include/glib-2.0/ -I/usr/lib/arm-linux-gnueabihf/glib-2.0/include/"
+> QT_LIBS_PULSEAUDIO="-lpulse -lpulse-mainloop-glib"
+1038c1041
+< QT_CFLAGS_GSTREAMER=
+—
+> QT_CFLAGS_GSTREAMER="-I/usr/include/gstreamer-0.10/ -I/usr/include/glib-2.0/ -I/usr/lib/arm-linux-
+gnueabihf/glib-2.0/include/ -I/usr/include/libxml2/"
+5123c5126
+< QT_CFLAGS_FONTCONFIG=
+—
+> QT_CFLAGS_FONTCONFIG=-I/usr/include/freetype2/

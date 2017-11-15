@@ -3,6 +3,15 @@
 sudo: required
 #base script to fresh install systems onto base image for raspberry pi
 
+#check internet connection
+ping -q -c3 google.com > /dev/null
+
+if [ $? -ne 0 ]
+then
+	echo "No Internet Connection...Aborting"
+	exit 1
+fi
+
 #configure displays
 cd /opt/
 git clone https://github.com/UCSolarCarTeam/Epsilon-Raspberry.git
@@ -45,4 +54,6 @@ cd ~/opt
 git clone git://code.qt.io/qt/qt5.git
 cd qt5
 ./init-repository
+
+patch configure < QT_CFLAGS_DBUS.patch
 
