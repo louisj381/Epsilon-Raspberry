@@ -60,3 +60,10 @@ cd ..
 patch -Np1 -d qt5 < fix-initrepo.patch
 cd qt5
 perl init-repository -f
+cd ~/Epsilon-Raspberry
+sudo mv QT_CFLAGS_DBUS.patch ~/opt/qt5
+cd ~/opt/qt5
+patch -Np1 -d qtbase < QT_CFLAGS_DBUS.patch
+cd qtbase
+./configure -v -opengl es2 -device linux-rasp-pi-g''+ -device-option CROSS_COMPILE=/usr/bin/ -opensource 
+-confirm-license -optimized-qmake -reduce-exports -release -qt-pcre -make libs -prefix /usr/local/qt5 &> output
