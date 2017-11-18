@@ -52,8 +52,11 @@ libxi-dev libdrm-dev libssl-dev libxcb-xinerama0 libxcb-xinerama0-dev
 mkdir ~/opt
 cd ~/opt
 git clone git://code.qt.io/qt/qt5.git
+cd ~/Epsilon-Raspberry
+sudo mv fix-initrepo.patch ~/opt
 cd qt5
-./init-repository
-
-patch configure < QT_CFLAGS_DBUS.patch
-
+git checkout v5.5.1
+cd ..
+patch -Np1 -d qtf < fix-initrepo.patch
+cd qt5
+perl init-repository -f
