@@ -57,6 +57,6 @@ sudo mv fix-initrepo.patch ~/opt
 cd qt5
 git checkout v5.5.1
 cd ..
-patch -Np1 -d qtf < fix-initrepo.patch
+patch -Np1 -d qt5 < fix-initrepo.patch
 cd qt5
 perl init-repository -f
