@@ -67,3 +67,5 @@ patch -Np1 -d qtbase < QT_CFLAGS_DBUS.patch
 cd qtbase
 ./configure -v -opengl es2 -device linux-rasp-pi-g''+ -device-option CROSS_COMPILE=/usr/bin/ -opensource 
 -confirm-license -optimized-qmake -reduce-exports -release -qt-pcre -make libs -prefix /usr/local/qt5 &> output
+make |& tee "output.txt"
+sudo make install |& tee "output_make_install.txt"
