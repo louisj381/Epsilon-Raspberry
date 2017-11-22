@@ -1,0 +1,1 @@
+Ensure to clone Repo to home directory (~) in order for the script to know where to move patch files upon running of the script.
