@@ -1,4 +1,5 @@
 = Instructions to run SetupScript
+
 Ensure to clone Repo to home directory (~) in order for the script to know where to move patch files upon running of the script.
 ----
 cd ~
@@ -9,6 +10,7 @@ navigate to Epsilon-Raspberry Directory
 cd Epsilon-Raspberry
 ----
 run the setupscript BUT make sure you are ready....to be ready:
+
 * leave your computer on all night as the script will take several hours to run.
 * ensure you have consistent, stable internet connection.
 * make sure you don't need to use the pi or move your computer until the script is complete
