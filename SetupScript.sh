@@ -1,6 +1,10 @@
 #!/bin/bash
 
-sudo: required
+if [ $USER -ne "root"]
+	then
+	echo "Permission Denied"
+	exit 1
+fi
 #base script to fresh install systems onto base image for raspberry pi
 
 #check internet connection
