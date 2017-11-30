@@ -20,14 +20,14 @@ run the setupscript BUT make sure you are ready....to be ready:
 flash forward to after completion, congratulations, you are almost there.
 navigate to your .bashrc file in your ~home directory and add the following two lines:
 ----
-export LD_LIBRARY_PATH=/usr/local/qt5/lib/
-export PATH=/usr/local/qt5/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games
+export LD_LIBRARY_PATH=/usr/local/qt5/lib/:/usr/local/lib
+export PATH=/usr/local/qt5/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/games:/usr/games:/usr/local
 ----
 save the changes and source the file to initialize the changes
 ----
 source ~/.bashrc
 ----
-then check where it points, mine says "/usr/bin/qmake"
+then check where it points, should be "/usr/local/Qt-5.5.1/bin/qmake"
 ----
 which qmake
 ----
