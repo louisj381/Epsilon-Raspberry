@@ -73,3 +73,7 @@ cd qtbase
 -confirm-license -optimized-qmake -reduce-exports -release -qt-pcre -make libs -prefix /usr/local/qt5 &> output
 make |& tee "output.txt"
 sudo make install |& tee "output_make_install.txt"
+cd ~/opt/qt5/qtmultimedia
+qmake
+make
+make install
