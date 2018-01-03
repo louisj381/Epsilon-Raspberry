@@ -6,7 +6,7 @@ if [ $USER -ne "root"]
  	exit 1
 fi
 
-ping -q -c3 google.com > /dev/null
+ping -q -c1 google.com > /dev/null
  
 if [ $? -ne 0 ]
 then
@@ -14,26 +14,23 @@ then
 	exit 1
 fi
 
-#install Backup Camera
-cd ~
-git clone https://github.com/UCSolarCarTeam/BackupCamera.git
-cd BackupCamera/Installer
+#install Epsilon-Onboard-Media-Control
+(cd /usr/local && git clone https://github.com/UCSolarCarTeam/BackupCamera.git)
+cd /usr/local/BackupCamera/Installer
 ./MainInstaller.sh
 ./AutoBootSetup.sh
 tvservice -d edid 
 edidparser edid
-#patch file likely needed to be created to completely configure Hermes
 
 #install Dashboard
-cd ~
-git clone https://github.com/UCSolarCarTeam/Epsilon-Dashboard.git
-cd Epsilon-Dashboard
+(cd /usr/local && git clone https://github.com/UCSolarCarTeam/Epsilon-Dashboard.git)
+cd /usr/local/Epsilon-Dashboard
 ./EpsilonDashboardSetup.sh
 
 #install music-player
-cd ~
+cd /usr/local
 git clone https://github.com/UCSolarCarTeam/Epsilon-Onboard-Media-Control.git
 
 #install Domovoi
-cd ~
+cd /usr/local
 git clone https://github.com/UCSolarCarTeam/Epsilon-Domovoi.git
